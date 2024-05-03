@@ -19,7 +19,7 @@ export class Produto {
     @Column({ type: "decimal", precision: 10, scale: 2, nullable: false })
     preco: number;
 
-    @Column()
+    @Column({length: 5000})
     foto: string;
 
     @ManyToOne(() => Categoria, (categoria) => categoria.produto, {
