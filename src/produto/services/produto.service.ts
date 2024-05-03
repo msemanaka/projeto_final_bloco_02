@@ -34,7 +34,7 @@ export class ProdutoService {
 
 
         if (!produto)
-            throw new HttpException('Produto não encontrada!', HttpStatus.NOT_FOUND);
+            throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND);
 
         return produto;
 
@@ -75,7 +75,7 @@ export class ProdutoService {
 
 
         if (!buscaProduto || !produto.id)
-            throw new HttpException('Produto não foi encontrada!', HttpStatus.NOT_FOUND)
+            throw new HttpException('Produto não foi encontrado!', HttpStatus.NOT_FOUND)
 
 
         if (produto.categoria) {
@@ -97,7 +97,7 @@ export class ProdutoService {
         let buscaProduto: Produto = await this.findById(id);
 
         if (!buscaProduto)
-            throw new HttpException('Produto não foi encontrada!', HttpStatus.NOT_FOUND)
+            throw new HttpException('Produto não foi encontrado!', HttpStatus.NOT_FOUND)
 
         return await this.produtoRepository.delete(id);
 
